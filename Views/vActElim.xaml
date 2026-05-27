@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scaldasS6.Views.vActElim"
+             Title="Actualizar / Eliminar">
+
+    <VerticalStackLayout Padding="30" Spacing="15">
+
+        <Label Text="Actualizar Estudiante"
+               FontSize="22"
+               HorizontalOptions="Center"
+               Margin="0,20,0,20"/>
+
+        <Grid ColumnDefinitions="120,*" RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="15">
+
+            <Label Text="Código" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtCodigo" IsReadOnly="True"
+                   Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Nombre" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingresa el nombre"
+                   Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Apellido" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingresa el apellido"
+                   Grid.Row="2" Grid.Column="1"/>
+
+            <Label Text="Edad" VerticalOptions="Center" Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="txtEdad" Placeholder="Ingresa la edad" Keyboard="Numeric"
+                   Grid.Row="3" Grid.Column="1"/>
+
+        </Grid>
+
+        <!-- Botones lado a lado -->
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="10" Margin="0,20,0,0">
+            <Button Grid.Column="0"
+            Text="Actualizar"
+            BackgroundColor="#5B4FCF"
+            TextColor="White"
+            CornerRadius="8"
+            Clicked="btnActualizar_Clicked"/>
+
+            <Button Grid.Column="1"
+            Text="Eliminar"
+            BackgroundColor="#E53935"
+            TextColor="White"
+            CornerRadius="8"
+            Clicked="btnEliminar_Clicked"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

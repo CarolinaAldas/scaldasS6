@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scaldasS6.Views.vAgregarEstudiante"
+             Title="vAgregarEstudiante">
+
+    <VerticalStackLayout Padding="30" Spacing="15">
+
+        <Label Text="Agregar Estudiante"
+               FontSize="22"
+               HorizontalOptions="Center"
+               Margin="0,20,0,20"/>
+
+        <Grid ColumnDefinitions="120,*" RowDefinitions="Auto,Auto,Auto" RowSpacing="15">
+
+            <Label Text="Nombre" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingresa el nombre"
+                   Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Apellido" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingresa el apellido"
+                   Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Edad" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtEdad" Placeholder="Ingresa la edad" Keyboard="Numeric"
+                   Grid.Row="2" Grid.Column="1"/>
+
+        </Grid>
+
+        <Button x:Name="btnAgregar"
+                Text="Agregar estudiante"
+                BackgroundColor="#5B4FCF"
+                TextColor="White"
+                CornerRadius="8"
+                Margin="0,20,0,0"
+                Clicked="btnAgregar_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

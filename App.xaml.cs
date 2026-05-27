@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using scaldasS6.Views;
 
 namespace scaldasS6
 {
@@ -7,11 +7,7 @@ namespace scaldasS6
         public App()
         {
             InitializeComponent();
-        }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new Views.vEstudiante());
+            MainPage = new NavigationPage(new vEstudiante());
         }
     }
 }
